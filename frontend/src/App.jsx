@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
-const API_URL = 'http://127.0.0.1:5000/api/rooms'
+
+const API_URL = '/api/rooms'
 
 const roomCollections = {
   1: 'COMFORT COLLECTION',
@@ -53,7 +54,7 @@ function App() {
     const guests = Number(guestsInput)
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/bookings', {
+         const response = await fetch('/api/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
